@@ -28,7 +28,11 @@ O sistema desenvolvido contempla:
 
 Validação CST:
 
-- função para validação de CST
+- Função para validação de CST
+
+Inserção de Produtos:
+
+- Lista de 10 produtos com FK e mensagens
 
 ---
 
@@ -69,6 +73,17 @@ if ValidaCSTEmpresa('020', 'PR', 'SP', '') then
   ShowMessage('Válido')
 else
   ShowMessage('Inválido');
+```
+
+```pascal
+begin
+  var Inserir := TInsereProdutos.Create;
+  try
+    Inserir.InserirListaProdutos;
+  finally
+    FreeAndNil(Inserir);
+  end;
+end;
 ```
 
 ---
