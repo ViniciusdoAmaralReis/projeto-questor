@@ -26,6 +26,10 @@ O sistema desenvolvido contempla:
 - **Funcionalidades** para inserção de 5 clientes, 5 carros e 5 vendas, cada uma com um carro diferente.
 - **Exclusão de vendas** de clientes não sorteados, sem utilizar o comando `IN` (usando `NOT EXISTS`).
 
+Validação CST:
+
+- função para validação de CST
+
 ---
 
 ## ▶️ Execução
@@ -59,6 +63,13 @@ begin
 end;
 ```
 Os métodos InserirDadosBD e ExecutarSql são fictícios.
+
+```pascal
+if ValidaCSTEmpresa('020', 'PR', 'SP', '') then
+  ShowMessage('Válido')
+else
+  ShowMessage('Inválido');
+```
 
 ---
 
