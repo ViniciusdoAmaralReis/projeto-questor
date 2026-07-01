@@ -155,11 +155,11 @@ end;
 procedure TSorteio.Inserir5Carros;
 begin
 
-  var Caro: TCarro;
+  var Carro: TCarro;
   for var I := 1 to 5 do
   begin
 
-    var Carro := TCarro.Create;
+    Carro := TCarro.Create;
     try
 
       Carro.ID := I;
